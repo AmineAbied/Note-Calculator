@@ -40,11 +40,12 @@ subjects = [
         "Please enter ARABE note (second control): ",
         "Please enter ARABE note (third control): "
     ]),
-    ("\033[1mFRANCAIS (4 CONTROLES)\033[0m", [
+    ("\033[1mFRANCAIS (5 CONTROLES)\033[0m", [
         "Please enter FRANCAIS note (first control): ",
         "Please enter FRANCAIS note (second control): ",
         "Please enter FRANCAIS note (third control): ",
-        "Please enter FRANCAIS note (fourth control): "
+        "Please enter FRANCAIS note (fourth control): ",
+        "Please enter FRANCAIS note (fifth control): "
     ]),
     ("\033[1mISLAMIQUE (3 CONTROLES)\033[0m", [
         "Please enter EDUCATION ISLAMIQUE note (first control): ",
@@ -62,25 +63,10 @@ subjects = [
         "Please enter PHYSICS & CHEMISTRY note (third control): ",
         "Please enter PHYSICS & CHEMISTRY note (fourth control): "
     ]),
-    ("\033[1mATC (3 CONTROLES)\033[0m", [
-        "Please enter ATC note (first control): ",
-        "Please enter ATC note (second control): ",
-        "Please enter ATC note (third control): "
-    ]),
-    ("\033[1mADC (3 CONTROLES)\033[0m", [
-        "Please enter ADC note (first control): ",
-        "Please enter ADC note (second control): ",
-        "Please enter ADC note (third control): "
-    ]),
-    ("\033[1mT (3 CONTROLES)\033[0m", [
-        "Please enter T note (first control): ",
-        "Please enter T note (second control): ",
-        "Please enter T note (third control): "
-    ]),
-    ("\033[1mPE (3 CONTROLES)\033[0m", [
-        "Please enter PE note (first control): ",
-        "Please enter PE note (second control): ",
-        "Please enter PE note (third control): "
+    ("\033[1mSI (3 CONTROLES)\033[0m", [
+        "Please enter SI note (first control): ",
+        "Please enter SI note (second control): ",
+        "Please enter SI note (third control): "
     ]),
     ("\033[1mPHILOSOPHY (3 CONTROLES)\033[0m", [
         "Please enter PHILOSOPHY note (first control): ",
@@ -124,9 +110,8 @@ activity = float(input("Please enter DISCIPLINE note: "))
 
 print("Procecing...")
 
-arabe, fr, islamq, maths, pc, atc, adc, t, pe, philo, anglais, sport = results.values()
+arabe, fr, islamq, maths, pc, si, philo, anglais, sport = results.values()
 
-si = atc*0.3 + adc*0.3 + t*0.2 + pe*0.2
 notemult = arabe*2 + fr*4 + islamq*2 + maths*6 + pc*6 + si*8 + philo*2 + anglais*2 + sport*1 + activity*1
 note = notemult / 34
 
